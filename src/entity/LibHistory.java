@@ -114,9 +114,9 @@ public class LibHistory {
     @Override
     public String toString() {
         if(bookReturn != null)
-           return "LibHistory{" + "id=" + id + ", book=" + book.getBookName() + ", reader=" + reader.getName() + " " + reader.getSurname() + ", bookIssued=" + bookIssued.toString() + ", bookReturn=" + bookReturn.toString() + '}';
+           return "LibHistory{" + "id=" + id + ", book=" + book.getBookName() + ", reader=" + reader.getName() + " " + reader.getSurname() + ", \nbookIssued=" + bookIssued.toString() + ", bookReturn=" + bookReturn.toString() + '}';
         else
-           return "LibHistory{" + "id=" + id + ", book=" + book.getBookName() + ", reader=" + reader.getName() + " " + reader.getSurname() + ", bookIssued=" + bookIssued.toString() + ", bookReturn= " + '}';
+           return "LibHistory{" + "id=" + id + ", book=" + book.getBookName() + ", reader=" + reader.getName() + " " + reader.getSurname() + ", \nbookIssued=" + bookIssued.toString() + ", bookReturn= " + '}';
  
     }
     
