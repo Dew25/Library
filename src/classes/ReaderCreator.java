@@ -17,8 +17,6 @@ public class ReaderCreator {
         Scanner scanner = new Scanner(System.in);
         System.out.println("-----Добавление новой читателя-----");
         Reader reader = new Reader();
-        System.out.println("Идентификатор  читателя (целое число):");
-        reader.setId(scanner.nextLong());
         System.out.println("Имя читателя:");
         reader.setName(scanner.nextLine());
         System.out.println("Фамилия читателя:");
