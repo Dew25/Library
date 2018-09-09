@@ -7,6 +7,7 @@ package library;
 
 import classes.BookCreator;
 import classes.BookReturner;
+import classes.HistoryReturner;
 import classes.LibHistoryCreator;
 import classes.ReaderCreator;
 import entity.Book;
@@ -62,6 +63,10 @@ public class App {
                         System.out.println("Книгу вернуть не удалось");
                     }
                     break;
+                case 5:
+                    HistoryReturner historyReturner = new HistoryReturner();
+                    historyReturner.printListWhoTookBooks(libHistories);
+                    break; 
                 default:
                     System.out.println("Выберите одно из действий!");
             }
