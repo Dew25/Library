@@ -18,6 +18,6 @@ public interface Manageable {
     public Book createBook();
     public Reader createReader();
     public LibHistory issueBook(List<Book> books, List<Reader> readers);
-    public boolean ReturnBook(List<LibHistory> libHistories);
-    
+    public boolean returnBook(List<LibHistory> libHistories);
+    public void returnHistory(List<LibHistory> libHistories);
 }
