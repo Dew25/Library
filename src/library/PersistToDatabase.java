@@ -29,11 +29,12 @@ public class PersistToDatabase implements Retentive{
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("LibraryPU");
         em = emf.createEntityManager();
         tx = em.getTransaction();
-       //emf.close();
     }
+    
     @Override
     public void freeResources() {
         if(em != null) em.close();
+        
     }
     
     @Override

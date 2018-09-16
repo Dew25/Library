@@ -25,6 +25,15 @@ public class ReaderCreator {
         reader.setPhone(scanner.nextLine());
         System.out.println("Город проживания читателя:");
         reader.setCity(scanner.nextLine());
-        return reader;
+        System.out.println("Для добавления введите любой символ\nДля отмены наберите -1");
+        String yes = "";
+        yes = scanner.next();
+        if(!"".equals(yes)){
+            System.out.println("----Читатель не добавлен----");
+            return null;
+        }else{
+            System.out.println("----Читатель добавлен----");
+            return reader;
+        }
     }
 }

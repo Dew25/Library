@@ -32,10 +32,14 @@ public class LibHistoryCreator {
             System.out.println(i+1+". "+readers.get(i).getName()+" "+readers.get(i).getSurname());
         }
         System.out.println("Выберите номер книги:");
+        System.out.println("(0 для выхода)");
         int numberBook = scanner.nextInt();
+        if(numberBook < 1) return null;
         Book book = books.get(numberBook-1);
         System.out.println("Выберите номер читателя:");
+        System.out.println("(-1 для выхода)");
         int numberReader = scanner.nextInt();
+        if(numberBook < 0) return null;
         Reader reader = readers.get(numberReader-1);
         Calendar c = new GregorianCalendar();
         LibHistory libHistory = new LibHistory(null, book, reader, c.getTime(), null);
