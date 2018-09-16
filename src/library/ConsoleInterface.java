@@ -41,7 +41,7 @@ public class ConsoleInterface implements Manageable{
     }
 
     @Override
-    public boolean returnBook(List<LibHistory> libHistories) {
+    public LibHistory returnBook(List<LibHistory> libHistories) {
         BookReturner bookReturner  = new BookReturner();
         return bookReturner.returnLibHistory(libHistories);            
     }

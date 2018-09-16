@@ -16,7 +16,7 @@ import java.util.Scanner;
  * @author jvm
  */
 public class BookReturner {
-    public boolean returnLibHistory(List<LibHistory> libHistories){
+    public LibHistory returnLibHistory(List<LibHistory> libHistories){
         try{
             System.out.println("-----Возврат книги-----");
             LibHistory libHistory = new LibHistory();
@@ -31,14 +31,14 @@ public class BookReturner {
                 System.out.println("Выберите номер строки с возвращаемой книгой: ");
                 System.out.println("Чтобы ничего не делать наберите -1");
                 int numHistory = scanner.nextInt();
-                if(numHistory < 0) return false;
+                if(numHistory < 0) return null;
                 libHistory = libHistories.get(numHistory-1);
                 libHistories.remove(libHistory);
                 Calendar c = new GregorianCalendar();
                 libHistory.setBookReturn(c.getTime());
-            return true;
+            return libHistory;
         }catch(Exception e){
-            return false;
+            return null;
         }
     }
 }
