@@ -7,16 +7,31 @@ package entity;
 
 import java.util.Date;
 import java.util.Objects;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
  * @author jvm
  */
+@Entity
 public class LibHistory {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @OneToOne(cascade = CascadeType.MERGE,orphanRemoval = true)
     private Book book;
+    @OneToOne(cascade = CascadeType.MERGE,orphanRemoval = true)
     private Reader reader;
+    @Temporal(TemporalType.TIMESTAMP)
     private Date bookIssued;
+    @Temporal(TemporalType.TIMESTAMP)
     private Date bookReturn;
 
     public LibHistory() {
